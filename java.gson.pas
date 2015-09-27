@@ -746,7 +746,7 @@ type
     {class} function valueOf(P1: JString): JLongSerializationPolicy; cdecl;
     {class} function values: TJavaObjectArray<JLongSerializationPolicy>; cdecl;
     {class} property DEFAULT: JLongSerializationPolicy read _GetDEFAULT;
-    {class} property STRING: JLongSerializationPolicy read _GetSTRING;
+    {class} property STRING_: JLongSerializationPolicy read _GetSTRING;
   end;
 
   [JavaSignature('com/google/gson/LongSerializationPolicy')]
@@ -1323,8 +1323,8 @@ type
   [JavaSignature('java/util/Map$Entry')]
   JMap_Entry = interface(IJavaInstance)
     ['{9D6A0684-A3FC-4629-A08A-36EDDA31753D}']
-    function equals(object: JObject): Boolean; cdecl;//Deprecated
-    function setValue(object: JObject): JObject; cdecl;//Deprecated
+    function equals(object_: JObject): Boolean; cdecl;//Deprecated
+    function setValue(object_: JObject): JObject; cdecl;//Deprecated
   end;
   TJMap_Entry = class(TJavaGenericImport<JMap_EntryClass, JMap_Entry>) end;
 
@@ -1922,7 +1922,7 @@ type
     {class} property CALENDAR_FACTORY: JTypeAdapterFactory read _GetCALENDAR_FACTORY;
     {class} property CHARACTER: JTypeAdapter read _GetCHARACTER;
     {class} property CHARACTER_FACTORY: JTypeAdapterFactory read _GetCHARACTER_FACTORY;
-    {class} property CLASS: JTypeAdapter read _GetCLASS;
+    {class} property CLASS_: JTypeAdapter read _GetCLASS;
     {class} property CLASS_FACTORY: JTypeAdapterFactory read _GetCLASS_FACTORY;
     {class} property DOUBLE: JTypeAdapter read _GetDOUBLE;
     {class} property ENUM_FACTORY: JTypeAdapterFactory read _GetENUM_FACTORY;
@@ -1940,7 +1940,7 @@ type
     {class} property NUMBER_FACTORY: JTypeAdapterFactory read _GetNUMBER_FACTORY;
     {class} property SHORT: JTypeAdapter read _GetSHORT;
     {class} property SHORT_FACTORY: JTypeAdapterFactory read _GetSHORT_FACTORY;
-    {class} property STRING: JTypeAdapter read _GetSTRING;
+    {class} property STRING_: JTypeAdapter read _GetSTRING;
     {class} property STRING_BUFFER: JTypeAdapter read _GetSTRING_BUFFER;
     {class} property STRING_BUFFER_FACTORY: JTypeAdapterFactory read _GetSTRING_BUFFER_FACTORY;
     {class} property STRING_BUILDER: JTypeAdapter read _GetSTRING_BUILDER;
@@ -2455,7 +2455,7 @@ type
     {class} property NAME: Jstream_JsonToken read _GetNAME;
     {class} property NULL: Jstream_JsonToken read _GetNULL;
     {class} property NUMBER: Jstream_JsonToken read _GetNUMBER;
-    {class} property STRING: Jstream_JsonToken read _GetSTRING;
+    {class} property STRING_: Jstream_JsonToken read _GetSTRING;
   end;
 
   [JavaSignature('com/google/gson/stream/JsonToken')]
@@ -2481,7 +2481,7 @@ type
     ['{B34AA52A-C9D0-4E5C-AB21-D5D644536B6C}']
     {class} function append(c: Char): JAppendable; cdecl; overload;//Deprecated
     {class} function append(csq: JCharSequence): JAppendable; cdecl; overload;//Deprecated
-    {class} function append(csq: JCharSequence; start: Integer; end: Integer): JAppendable; cdecl; overload;//Deprecated
+    {class} function append(csq: JCharSequence; start: Integer; end_: Integer): JAppendable; cdecl; overload;//Deprecated
   end;
 
   [JavaSignature('java/lang/Appendable')]
@@ -2571,7 +2571,7 @@ type
     {class} function compare(lhs: Char; rhs: Char): Integer; cdecl;
     {class} function digit(c: Char; radix: Integer): Integer; cdecl; overload;
     {class} function digit(codePoint: Integer; radix: Integer): Integer; cdecl; overload;
-    {class} function equals(object: JObject): Boolean; cdecl;
+    {class} function equals(object_: JObject): Boolean; cdecl;
     {class} function forDigit(digit: Integer; radix: Integer): Char; cdecl;
     {class} function getDirectionality(c: Char): Byte; cdecl; overload;
     {class} function getDirectionality(codePoint: Integer): Byte; cdecl; overload;
@@ -2703,7 +2703,7 @@ type
     {class} property START_PUNCTUATION: Byte read _GetSTART_PUNCTUATION;
     {class} property SURROGATE: Byte read _GetSURROGATE;
     {class} property TITLECASE_LETTER: Byte read _GetTITLECASE_LETTER;
-    {class} property TYPE: Jlang_Class read _GetTYPE;
+    {class} property TYPE_: Jlang_Class read _GetTYPE;
     {class} property UNASSIGNED: Byte read _GetUNASSIGNED;
     {class} property UPPERCASE_LETTER: Byte read _GetUPPERCASE_LETTER;
   end;
@@ -2739,10 +2739,10 @@ type
     {class} function _GetROUND_UP: Integer; cdecl;
     {class} function _GetTEN: JBigDecimal; cdecl;
     {class} function _GetZERO: JBigDecimal; cdecl;
-    {class} function init(in: TJavaArray<Char>; offset: Integer; len: Integer): JBigDecimal; cdecl; overload;
-    {class} function init(in: TJavaArray<Char>; offset: Integer; len: Integer; mc: JMathContext): JBigDecimal; cdecl; overload;
-    {class} function init(in: TJavaArray<Char>): JBigDecimal; cdecl; overload;
-    {class} function init(in: TJavaArray<Char>; mc: JMathContext): JBigDecimal; cdecl; overload;
+    {class} function init(in_: TJavaArray<Char>; offset: Integer; len: Integer): JBigDecimal; cdecl; overload;
+    {class} function init(in_: TJavaArray<Char>; offset: Integer; len: Integer; mc: JMathContext): JBigDecimal; cdecl; overload;
+    {class} function init(in_: TJavaArray<Char>): JBigDecimal; cdecl; overload;
+    {class} function init(in_: TJavaArray<Char>; mc: JMathContext): JBigDecimal; cdecl; overload;
     {class} function init(val: JString): JBigDecimal; cdecl; overload;
     {class} function init(val: JString; mc: JMathContext): JBigDecimal; cdecl; overload;
     {class} function init(val: Double): JBigDecimal; cdecl; overload;
@@ -3010,7 +3010,7 @@ type
   [JavaSignature('java/text/AttributedCharacterIterator$Attribute')]
   JAttributedCharacterIterator_Attribute = interface(JObject)
     ['{18526153-8CA3-4BDA-AC30-F568F5361582}']
-    function equals(object: JObject): Boolean; cdecl;//Deprecated
+    function equals(object_: JObject): Boolean; cdecl;//Deprecated
     function hashCode: Integer; cdecl;//Deprecated
     function toString: JString; cdecl;//Deprecated
   end;
@@ -3018,17 +3018,17 @@ type
 
   JFormatClass = interface(JObjectClass)
     ['{B3360D82-FFC6-472C-B0C7-DA4B605FA6C7}']
-    {class} function format(object: JObject): JString; cdecl; overload;//Deprecated
-    {class} function format(object: JObject; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
+    {class} function format(object_: JObject): JString; cdecl; overload;//Deprecated
+    {class} function format(object_: JObject; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
   end;
 
   [JavaSignature('java/text/Format')]
   JFormat = interface(JObject)
     ['{621A5512-28D0-465D-A17C-D91BA62AC2BC}']
     function clone: JObject; cdecl;//Deprecated
-    function formatToCharacterIterator(object: JObject): JAttributedCharacterIterator; cdecl;//Deprecated
-    function parseObject(string: JString): JObject; cdecl; overload;//Deprecated
-    function parseObject(string: JString; position: JParsePosition): JObject; cdecl; overload;//Deprecated
+    function formatToCharacterIterator(object_: JObject): JAttributedCharacterIterator; cdecl;//Deprecated
+    function parseObject(string_: JString): JObject; cdecl; overload;//Deprecated
+    function parseObject(string_: JString; position: JParsePosition): JObject; cdecl; overload;//Deprecated
   end;
   TJFormat = class(TJavaGenericImport<JFormatClass, JFormat>) end;
 
@@ -3072,8 +3072,8 @@ type
     {class} function getTimeInstance(style: Integer): Jtext_DateFormat; cdecl; overload;
     {class} function getTimeInstance(style: Integer; locale: JLocale): Jtext_DateFormat; cdecl; overload;//Deprecated
     {class} function isLenient: Boolean; cdecl;//Deprecated
-    {class} function parse(string: JString): JDate; cdecl; overload;//Deprecated
-    {class} function parse(string: JString; position: JParsePosition): JDate; cdecl; overload;//Deprecated
+    {class} function parse(string_: JString): JDate; cdecl; overload;//Deprecated
+    {class} function parse(string_: JString; position: JParsePosition): JDate; cdecl; overload;//Deprecated
     {class} procedure setNumberFormat(format: JNumberFormat); cdecl;//Deprecated
     {class} procedure setTimeZone(timezone: JTimeZone); cdecl;//Deprecated
     {class} property AM_PM_FIELD: Integer read _GetAM_PM_FIELD;
@@ -3105,12 +3105,12 @@ type
   Jtext_DateFormat = interface(JFormat)
     ['{5340AD79-1BFF-4A08-9D2B-365E852F7C98}']
     function clone: JObject; cdecl;//Deprecated
-    function equals(object: JObject): Boolean; cdecl;//Deprecated
-    function format(object: JObject; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
+    function equals(object_: JObject): Boolean; cdecl;//Deprecated
+    function format(object_: JObject; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
     function getCalendar: JCalendar; cdecl;
     function getTimeZone: JTimeZone; cdecl;//Deprecated
     function hashCode: Integer; cdecl;//Deprecated
-    function parseObject(string: JString; position: JParsePosition): JObject; cdecl;//Deprecated
+    function parseObject(string_: JString; position: JParsePosition): JObject; cdecl;//Deprecated
     procedure setCalendar(cal: JCalendar); cdecl;//Deprecated
     procedure setLenient(value: Boolean); cdecl;//Deprecated
   end;
@@ -3131,7 +3131,7 @@ type
   [JavaSignature('java/text/FieldPosition')]
   JFieldPosition = interface(JObject)
     ['{10819166-C974-4752-BD60-DC299ECF476E}']
-    function equals(object: JObject): Boolean; cdecl;
+    function equals(object_: JObject): Boolean; cdecl;
     function getFieldAttribute: JFormat_Field; cdecl;
     function hashCode: Integer; cdecl;
     procedure setBeginIndex(index: Integer); cdecl;
@@ -3155,7 +3155,7 @@ type
     {class} function clone: JObject; cdecl;//Deprecated
     {class} function format(value: Int64): JString; cdecl; overload;//Deprecated
     {class} function format(value: Int64; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
-    {class} function format(object: JObject; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
+    {class} function format(object_: JObject; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
     {class} function getAvailableLocales: TJavaObjectArray<JLocale>; cdecl;
     {class} function getCurrencyInstance: JNumberFormat; cdecl; overload;
     {class} function getCurrencyInstance(locale: JLocale): JNumberFormat; cdecl; overload;
@@ -3171,9 +3171,9 @@ type
     {class} function getPercentInstance: JNumberFormat; cdecl; overload;
     {class} function getPercentInstance(locale: JLocale): JNumberFormat; cdecl; overload;
     {class} function getRoundingMode: JRoundingMode; cdecl;
-    {class} function parse(string: JString): JNumber; cdecl; overload;
-    {class} function parse(string: JString; position: JParsePosition): JNumber; cdecl; overload;
-    {class} function parseObject(string: JString; position: JParsePosition): JObject; cdecl;
+    {class} function parse(string_: JString): JNumber; cdecl; overload;
+    {class} function parse(string_: JString; position: JParsePosition): JNumber; cdecl; overload;
+    {class} function parseObject(string_: JString; position: JParsePosition): JObject; cdecl;
     {class} procedure setMaximumIntegerDigits(value: Integer); cdecl;//Deprecated
     {class} procedure setMinimumFractionDigits(value: Integer); cdecl;//Deprecated
     {class} procedure setMinimumIntegerDigits(value: Integer); cdecl;//Deprecated
@@ -3184,7 +3184,7 @@ type
   [JavaSignature('java/text/NumberFormat')]
   JNumberFormat = interface(JFormat)
     ['{4C770B91-BD41-4070-A7C3-6CF3BF099AC4}']
-    function equals(object: JObject): Boolean; cdecl;//Deprecated
+    function equals(object_: JObject): Boolean; cdecl;//Deprecated
     function format(value: Double): JString; cdecl; overload;//Deprecated
     function format(value: Double; buffer: JStringBuffer; field: JFieldPosition): JStringBuffer; cdecl; overload;//Deprecated
     function getCurrency: JCurrency; cdecl;
@@ -3203,7 +3203,7 @@ type
   JParsePositionClass = interface(JObjectClass)
     ['{0724101A-25F5-4AC4-BD4D-261CAD09EEB7}']
     {class} function init(index: Integer): JParsePosition; cdecl;
-    {class} function equals(object: JObject): Boolean; cdecl;//Deprecated
+    {class} function equals(object_: JObject): Boolean; cdecl;//Deprecated
     {class} procedure setErrorIndex(index: Integer); cdecl;//Deprecated
     {class} procedure setIndex(index: Integer); cdecl;//Deprecated
     {class} function toString: JString; cdecl;//Deprecated

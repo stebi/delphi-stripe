@@ -1442,7 +1442,7 @@ type
     function getRefundGross: JInteger; cdecl;
     function getValidationCount: JInteger; cdecl;
     function getValidationFees: JInteger; cdecl;
-    procedure set(P1: JInteger); cdecl;
+    procedure set_(P1: JInteger); cdecl;
     procedure setAdjustmentCount(P1: JInteger); cdecl;
     procedure setAdjustmentGross(P1: JInteger); cdecl;
     procedure setChargeCount(P1: JInteger); cdecl;
